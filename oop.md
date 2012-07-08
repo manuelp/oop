@@ -9,6 +9,9 @@
 - Critiche
 - Citare [Anti-if campaign](http://www.antiifcampaign.com/)
 
+## historySmalltalk ##
+> I just decided to leave inheritance out as a feature in Smalltalk-72, knowing that we could simulate it back using Smalltalk’s LISPlike flexibility. The biggest contributor to these AI ideas was Larry Tesler who used what is now called “slot inheritance” extensively in his various versions of early desktop publishing systems. Nowadays, this would be called a “delegation-style” inheritance scheme.
+
 ## oop ##
 > I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages
 
@@ -190,6 +193,11 @@ Da [Alan Kay][historySmalltalk]:
 
 > OOP is about modeling the problem with a community of autonomous agents. The way to make OOP shine is to build a simulation of the problem. And I remembered the thrill I once had when I first read about OOP. About imagining these little software robots going about their business inside my programs. An object that can “think” for itself and has a behaviour. Now *that* is what OOP is about!
 
+## kayConversation ##
+Sul late-binding:
+
+> It’s not that people are completely stupid, but if there’s a big idea and you have deadlines and you have expedience and you have competitors, very likely what you’ll do is take a low-pass filter on that idea and implement one part of it and miss what has to be done next. This happens over and over again. If you’re using early-binding languages as most people do, rather than late-binding languages, then you really start getting locked in to stuff that you’ve already done. You can’t reformulate things that easily.
+
 ## Storia ##
 Perchè allora è diventata mainstream un'idea "corrotta" della programmazione orientata ad oggetti? Una possibile spiegazione la dà [Ralph Johnson][oopWrongPath]:
 
@@ -202,6 +210,7 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 - [A to Z of programming languages: Smalltalk-80][kayInterview]
 - [The computer revolution hasn't happened yet][computerRevolution], il [video](http://video.google.com/videoplay?docid=-2950949730059754521) del relativo talk all'OOPSLA del '97.
 - [Execution in the kingdom of nouns](http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html)
+- [A conversation with Alan Kay][kayConversation]
 
 ### Da riferire ###
 - [Storia del termine OOP][historyOOP]
@@ -216,6 +225,7 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 - [Name Objects after things, not actions!](http://matteo.vaccari.name/blog/archives/743)
 - [Classess without faces](http://matteo.vaccari.name/blog/archives/700) Esempio nomenclatura
 - [On the folly of representing a first name with a String](http://matteo.vaccari.name/blog/archives/685) Esempio design form
+- [Objects are just objects, aren't they?](http://www.confreaks.com/videos/461-rubyconf2010-objects-are-just-objects-aren-t-they)
 
 [oop]: http://www.purl.org/stefan_ram/pub/doc_kay_oop_en
 [uap]: martinfowler.com/bliki/UniformAccessPrinciple.html
@@ -224,6 +234,7 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 [historyOOP]: http://programmers.stackexchange.com/a/142330
 [computerRevolution]: http://blog.moryton.net/2007/12/computer-revolution-hasnt-happened-yet.html
 [kingdomNouns]: http://steve-yegge.blogspot.it/2006/03/execution-in-kingdom-of-nouns.html
+[kayConversation]: http://queue.acm.org/detail.cfm?id=1039523
 
 [laboratoryOOP]: http://c2.com/doc/oopsla89/paper.html
 [modulesParnas]: http://sunnyday.mit.edu/16.355/parnas-criteria.html
