@@ -107,7 +107,7 @@ Quindi un modo di attaccare e gestire la complessità. Non è un'idea nuova, l'e
 >
 > You must, must not let the interior of any one of these things to be a factor in the computation of the whole. Okay. This is only part of the story. The cell membrane is there to keep most things out, as much at it is there to keep certain things in.
 
-Non tanto "object-oriented" quanto *process oriented* ([Steve Yegge][kingdomNouns] sarà contento]):
+Non tanto "object-oriented" quanto *process oriented* ([Steve Yegge][kingdomNouns] sarà contento):
 
 > I think our confusion with objects is the problem that in our Western culture, we have a language that has very hard nouns and verbs in it. Our process words stink. It's much easier for us when we think of an object—and I have apologized profusely over the last twenty years for making up the term object-oriented, because as soon as it started to be misapplied, I realized that I should have used a much more process-oriented term for it. The Japanese have an interesting word, which is called ma. Spelled in English, just ma. Ma is the stuff in-between what we call objects. It's the stuff we don't see, because we're focused on the nounness of things rather than the processness of things. Japanese has a more process-feel oriented way of looking at how things relate to each other. You can always tell that by looking at the size of [the] word it takes to express something that is important. Ma is very short.
 
@@ -158,8 +158,6 @@ Sulla nascita di Squeak:
 
 > One of the reasons we got involved in doing Smalltalk again, after, for me, it was sixteen years of not working on programming languages. A couple of years ago we started this project called Squeak, which is simply not an attempt to give the world a free Smalltalk, but an attempt to give the world a bootstrapping mechanism for something much better than Smalltalk, and when you fool around with Squeak, please, please, think of it from that standpoint. Think of how you can obsolete the damn thing by using its own mechanisms for getting the next version of itself. So look for the blue thoughts!
 
-
-
 ## Sommario ##
 - Tre caratteristiche
 - enfasi su messaging (virtual machines)
@@ -183,10 +181,16 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 - [The computer revolution hasn't happened yet][computerRevolution], il [video](http://video.google.com/videoplay?docid=-2950949730059754521) del relativo talk all'OOPSLA del '97.
 - [Execution in the kingdom of nouns](http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html)
 
+- [A Laboratory For Teaching Object-Oriented Thinking][laboratoryOOP]
+
+
+
 [oop]: http://www.purl.org/stefan_ram/pub/doc_kay_oop_en
 [uap]: martinfowler.com/bliki/UniformAccessPrinciple.html
 [oopWrongPath]: http://www.infoq.com/news/2010/07/objects-smalltalk-erlang
-[kayInterview]: A to Z of programming languages: Smalltalk-80
+[kayInterview]: http://www.computerworld.com.au/article/print/352182/z_programming_languages_smalltalk-80
 [historyOOP]: http://programmers.stackexchange.com/a/142330
 [computerRevolution]: http://blog.moryton.net/2007/12/computer-revolution-hasnt-happened-yet.html
 [kingdomNouns]: http://steve-yegge.blogspot.it/2006/03/execution-in-kingdom-of-nouns.html
+
+[laboratoryOOP]: http://c2.com/doc/oopsla89/paper.html
