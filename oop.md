@@ -7,6 +7,7 @@
 - Mia definizione/summary del reale OOP/object thinking
 - Conseguenze dell'object-thinking: object design (esempi)
 - Critiche
+- Citare [Anti-if campaign](http://www.antiifcampaign.com/)
 
 ## oop ##
 > I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages
@@ -158,6 +159,20 @@ Sulla nascita di Squeak:
 
 > One of the reasons we got involved in doing Smalltalk again, after, for me, it was sixteen years of not working on programming languages. A couple of years ago we started this project called Squeak, which is simply not an attempt to give the world a free Smalltalk, but an attempt to give the world a bootstrapping mechanism for something much better than Smalltalk, and when you fool around with Squeak, please, please, think of it from that standpoint. Think of how you can obsolete the damn thing by using its own mechanisms for getting the next version of itself. So look for the blue thoughts!
 
+## Matteo Vaccari ##
+Anche in Italia abbiamo qualche persona che pensa e scrive riguardo l'OOP reale.
+
+### A revelation insiede another revelation ###
+http://matteo.vaccari.name/blog/archives/675
+
+Sul libro "Object Thinking":
+
+> One of the main things I got out of it is that Object Thinking is a revolutionary break with respect to established software engineering practice. Another thing is that the view of objects as Abstract Data Type is basically the establishment’s way to dilute and incorporate the grand new thing and make it look like a variation of the old thing.
+
+[Objects are good but not for domain modeling](http://c2.com/cgi/wiki?OopNotForDomainModeling)?
+
+> the old OOP books all said things like “take the description of your problem, underline the nouns in the description, and these are your candidate objects”. I used to think that this is a silly exercise! And I’m not alone.
+
 ## Sommario ##
 - Tre caratteristiche
 - enfasi su messaging (virtual machines)
@@ -167,23 +182,40 @@ Me stesso medesimo:
 
 > The problem here is more a perspective/mindset one I think. As far as I understand object thinking, it's all about fractal design and messages between intelligent objects (that are like little virtual machines). The concept of "dumb object" seems to me in contrast with this vision. I don't say that it's absolutely wrong, but IMHO it's wrong in the context of object thinking and design. 
 
+Modo di pensare che produce una *decomposizione* del sistema molto diversa da quella prodotta secondo il paradigma procedurale (cita Object Thinking).
+
+Da [Alan Kay][historySmalltalk]:
+
+> This is probably a good place to comment on the difference between what we thought of as OOP-style and the superficial encapsulation called “abstract data types” that was just starting to be investigated in academic circles. … To put it mildly, we were quite amazed at this, since to us, what Simula had whispered was something much stronger than simply reimplementing a weak and ad hoc idea. What I got from Simula was that you could now replace bindings and assignment with goals. … the objects should be presented as sites of higher level behaviors more appropriate for use as dynamic components.
+
+> OOP is about modeling the problem with a community of autonomous agents. The way to make OOP shine is to build a simulation of the problem. And I remembered the thrill I once had when I first read about OOP. About imagining these little software robots going about their business inside my programs. An object that can “think” for itself and has a behaviour. Now *that* is what OOP is about!
+
 ## Storia ##
 Perchè allora è diventata mainstream un'idea "corrotta" della programmazione orientata ad oggetti? Una possibile spiegazione la dà [Ralph Johnson][oopWrongPath]:
 
 > One of the things that always happen when you get an idea and it comes out and it's too radical for most people. Most people don't adopt the whole thing, they take a piece of it and then you get this approximation.
 
-## Riferimenti
+## Riferimenti ##
 - [Dr. Alan Kay on the Meaning of "Object-Oriented Programming"][oop]
 - [Uniform Access Principle][uap], vedere anche la [pagina](https://en.wikipedia.org/wiki/Uniform_access_principle) di Wikipedia corrispondente
 - [Object Oriented Programming: The Wrong Path?](http://www.infoq.com/news/2010/07/objects-smalltalk-erlang)
 - [A to Z of programming languages: Smalltalk-80][kayInterview]
-- [Storia del termine OOP][historyOOP]
 - [The computer revolution hasn't happened yet][computerRevolution], il [video](http://video.google.com/videoplay?docid=-2950949730059754521) del relativo talk all'OOPSLA del '97.
 - [Execution in the kingdom of nouns](http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html)
 
+### Da riferire ###
+- [Storia del termine OOP][historyOOP]
 - [A Laboratory For Teaching Object-Oriented Thinking][laboratoryOOP]
+- ["On the Criteria To Be Used in Decomposing Systems into Modules" by D.L. Parnas][modulesParnas]
+- [Early History Of Smalltalk][historySmalltalk] (c'è anche una [versione](http://propella.sakura.ne.jp/earlyHistoryST/EarlyHistoryST.html) più semplice da leggere ma senza le figure)
+- [Design Principles Behind Smalltalk][designPrinciplesSmalltalk]
+- [Problems With Existing OOP Evidence][problemsOOP]
+- [L'arte perduta di pensare ad oggetti](http://matteo.vaccari.name/blog/archives/723), c'è anche il [video][OOPVaccari].
 
-
+- http://www.bonkersworld.net/object-world/
+- [Name Objects after things, not actions!](http://matteo.vaccari.name/blog/archives/743)
+- [Classess without faces](http://matteo.vaccari.name/blog/archives/700) Esempio nomenclatura
+- [On the folly of representing a first name with a String](http://matteo.vaccari.name/blog/archives/685) Esempio design form
 
 [oop]: http://www.purl.org/stefan_ram/pub/doc_kay_oop_en
 [uap]: martinfowler.com/bliki/UniformAccessPrinciple.html
@@ -194,3 +226,8 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 [kingdomNouns]: http://steve-yegge.blogspot.it/2006/03/execution-in-kingdom-of-nouns.html
 
 [laboratoryOOP]: http://c2.com/doc/oopsla89/paper.html
+[modulesParnas]: http://sunnyday.mit.edu/16.355/parnas-criteria.html
+[historySmalltalk]: http://www.iam.unibe.ch/~ducasse/FreeBooks/SmalltalkHistoryHOPL.pdf
+[designPrinciplesSmalltalk]: http://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html
+[problemsOOP]: http://c2.com/cgi/wiki?ProblemsWithExistingOopEvidence
+[OOPVaccari]: https://www.youtube.com/watch?v=jO6Z3wOdfWc
