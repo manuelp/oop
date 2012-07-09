@@ -194,7 +194,21 @@ Da [Alan Kay][historySmalltalk]:
 > OOP is about modeling the problem with a community of autonomous agents. The way to make OOP shine is to build a simulation of the problem. And I remembered the thrill I once had when I first read about OOP. About imagining these little software robots going about their business inside my programs. An object that can “think” for itself and has a behaviour. Now *that* is what OOP is about!
 
 ## kayConversation ##
-Sul late-binding:
+Chi è Alan Kay?
+
+>Kay was one of the founders of the Xerox Palo Alto Research Center (PARC), where he led one of several groups that together developed modern workstations (and the forerunners of the Macintosh), Smalltalk, the overlapping window interface, desktop publishing, the Ethernet, laser printing, and network client-servers.
+>
+> Prior to his work at PARC, Kay earned a Ph.D. in 1969 from the University of Utah, where he designed a graphical object-oriented personal computer and was a member of the research team that developed pioneering 3-D graphics work for the Advanced Research Projects Agency (ARPA). Kay was also a “slight participant” in the original design of the ARPANet, which later became the Internet. He holds undergraduate degrees in mathematics and molecular biology from the University of Colorado. After leaving Xerox PARC, Kay went on to become chief scientist of Atari, a Fellow of Apple Computer, and vice president of research and development at The Walt Disney Company.
+>
+>Today he is Senior Fellow at Hewlett-Packard Labs and president of Viewpoints Research Institute, a nonprofit organization whose goal is to change how children are educated by creating a sample curriculum with supporting media for teaching math and science. This curriculum will use Squeak as its media, and will be highly interactive and constructive. Kay’s deep interests in children and education have been the catalysts for many of his ideas over the years.
+>
+>In addition to winning the Turing Award, Kay recently received the Draper Prize from the National Academy of Engineering and the Kyoto Prize in Advanced Technology, awarded every four years by the Inamori Foundation.
+
+Come mai Smalltalk e la concezione dell'OOP non hanno preso piede? Probabilmente per colpa della commercializzazione.
+
+> You could think of it as putting a low-pass filter on some of the good ideas from the ’60s and ’70s, as computing spread out much, much faster than educating unsophisticated people can happen. In the last 25 years or so, we actually got something like a pop culture, similar to what happened when television came on the scene and some of its inventors thought it would be a way of getting Shakespeare to the masses. But they forgot that you have to be more sophisticated and have more perspective to understand Shakespeare. What television was able to do was to capture people as they were.
+
+Sull'utilità del late-binding:
 
 > It’s not that people are completely stupid, but if there’s a big idea and you have deadlines and you have expedience and you have competitors, very likely what you’ll do is take a low-pass filter on that idea and implement one part of it and miss what has to be done next. This happens over and over again. If you’re using early-binding languages as most people do, rather than late-binding languages, then you really start getting locked in to stuff that you’ve already done. You can’t reformulate things that easily.
 
