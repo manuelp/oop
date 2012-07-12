@@ -208,6 +208,14 @@ Come mai Smalltalk e la concezione dell'OOP non hanno preso piede? Probabilmente
 
 > You could think of it as putting a low-pass filter on some of the good ideas from the ’60s and ’70s, as computing spread out much, much faster than educating unsophisticated people can happen. In the last 25 years or so, we actually got something like a pop culture, similar to what happened when television came on the scene and some of its inventors thought it would be a way of getting Shakespeare to the masses. But they forgot that you have to be more sophisticated and have more perspective to understand Shakespeare. What television was able to do was to capture people as they were.
 
+Software engineering?
+
+> If you look at software today, through the lens of the history of engineering, it’s certainly engineering of a sort—but it’s the kind of engineering that people without the concept of the arch did. Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves.
+
+Le idee principali alla base di Smalltalk: *late-binding* e *oggetti*:
+
+> I would compare the Smalltalk stuff that we did in the ’70s with something like a Gothic cathedral. We had two ideas, really. One of them we got from Lisp: late binding. The other one was the idea of objects. Those gave us something a little bit like the arch, so we were able to make complex, seemingly large structures out of very little material, but I wouldn’t put us much past the engineering of 1,000 years ago.
+
 Sull'utilità del late-binding:
 
 > It’s not that people are completely stupid, but if there’s a big idea and you have deadlines and you have expedience and you have competitors, very likely what you’ll do is take a low-pass filter on that idea and implement one part of it and miss what has to be done next. This happens over and over again. If you’re using early-binding languages as most people do, rather than late-binding languages, then you really start getting locked in to stuff that you’ve already done. You can’t reformulate things that easily.
