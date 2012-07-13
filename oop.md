@@ -220,6 +220,102 @@ Sull'utilità del late-binding:
 
 > It’s not that people are completely stupid, but if there’s a big idea and you have deadlines and you have expedience and you have competitors, very likely what you’ll do is take a low-pass filter on that idea and implement one part of it and miss what has to be done next. This happens over and over again. If you’re using early-binding languages as most people do, rather than late-binding languages, then you really start getting locked in to stuff that you’ve already done. You can’t reformulate things that easily.
 
+Su linguaggi di programmazione, Java, Lisp, Smalltalk e pop-culture:
+
+> The stuff that is in vogue today is only about “one- half” of those languages. Sun Microsystems had the right people to make Java into a first-class language, and I believe it was the Sun marketing people who rushed the thing out before it should have gotten out. They made it impossible for the Sun software people to do what needed to be done
+
+> I think a lot of the success of various programming languages is expeditious gap-filling. Perl is another example of filling a tiny, short-term need, and then being a real problem in the longer term. Basically, a lot of the problems that computing has had in the last 25 years comes from systems where the designers were trying to fix some short-term thing and didn’t think about whether the idea would scale if it were adopted. There should be a half-life on software so old software just melts away over 10 or 15 years.
+
+> Once you have something that grows faster than education grows, you’re always going to get a pop culture.
+
+> It’s well known that I tried to kill Smalltalk in the later ’70s. There were a few years when it was the most wonderful thing in the world. It answered needs in a more compact and beautiful way than anything that had been done before. But time moves on. As we learned more and got more ambitious about what we wanted to do, we realized that there are all kinds of things in Smalltalk that don’t scale the way they should—for instance, the reflection stuff that we had in there. It was one of the first languages to really be able to see itself, but now it is known how to do all levels of reflection much better—so we should implement that. [...] So the problem is—I’ve said this about both Smalltalk and Lisp—they tend to eat their young. What I mean is that both Lisp and Smalltalk are really fabulous vehicles, because they have a meta-system. They have so many ways of dealing with problems that the early-binding languages don’t have, that it’s very, very difficult for people who like Lisp or Smalltalk to imagine anything else.
+
+In particolare su Java e Smalltalk come piattaforme:
+
+> We looked at Java very closely in 1995 when we were starting on a major set of implementations, just because it’s a lot of work to do a viable language kernel. The thing we liked least about Java was the way it was implemented. It had this old idea, which has never worked, of having a set of paper specs, having to implement the VM (virtual machine) to the paper specs, and then having benchmarks that try to validate what you’ve just implemented—and that has never resulted in a completely compatible system.
+>
+> The technique that we had for Smalltalk was to write the VM in itself, so there’s a Smalltalk simulator of the VM that was essentially the only specification of the VM. You could debug and you could answer any question about what the VM would do by submitting stuff to it, and you made every change that you were going to make to the VM by changing the simulator. After you had gotten everything debugged the way you wanted, you pushed the button and it would generate, without human hands touching it, a mathematically correct version of C that would go on whatever platform you were trying to get onto.
+>
+> The result is that this system today, called Squeak, runs identically on more than two dozen platforms. Java does not do that. If you think about what the Internet means, it means you have to run identically on everything that is hooked to the Internet. So Java, to me, has always violated one of the prime things about software engineering in the world of the Internet.
+
+Su LISP definito in sè stesso:
+
+> Yes, that was the big revelation to me when I was in graduate school—when I finally understood that the half page of code on the bottom of page 13 of the Lisp 1.5 manual was Lisp in itself. These were “Maxwell’s Equations of Software!” This is the whole world of programming in a few lines that I can put my hand over.
+>
+> I realized that anytime I want to know what I’m doing, I can just write down the kernel of this thing in a half page and it’s not going to lose any power. In fact, it’s going to gain power by being able to reenter itself much more readily than most systems done the other way can possibly do.
+
+Ma purtroppo, ad oggi l'*educazione* non è delle migliori (vedi pop-culture):
+
+> All of these ideas could be part of both software engineering and computer science, but I fear—as far as I can tell—that most undergraduate degrees in computer science these days are basically Java vocational training.
+>
+> I’ve heard complaints from even mighty Stanford University with its illustrious faculty that basically the undergraduate computer science program is little more than Java certification. 
+
+L'intento originale del C++:
+
+> You have to be a different kind of person to love C++. It is a really interesting example of how a well-meant idea went wrong, because [C++ creator] Bjarne Stroustrup was not trying to do what he has been criticized for. His idea was that first, it might be useful if you did to C what Simula did to Algol, which is basically act as a preprocessor for a different kind of architectural template for programming. It was basically for super-good programmers who are supposed to subclass everything, including the storage allocator, before they did anything serious. The result, of course, was that most programmers did not subclass much. So the people I know who like C++ and have done good things in C++ have been serious iron-men who have basically taken it for what it is, which is a kind of macroprocessor. I grew up with macro systems in the early ’60s, and you have to do a lot of work to make them work for you—otherwise, they kill you.
+
+Sullo stile dei linguaggi:
+
+> In a history of Smalltalk I wrote for ACM, I characterized one way of looking at languages in this way: a lot of them are either the agglutination of features or they’re a crystallization of style. Languages such as APL, Lisp, and Smalltalk are what you might call style languages, where there’s a real center and imputed style to how you’re supposed to do everything. Other languages such as PL/I and, indeed, languages that try to be additive without consolidation have often been more successful. I think the style languages appeal to people who have a certain mathematical laziness to them. Laziness actually pays off later on, because if you wind up spending a little extra time seeing that “oh, yes, this language is going to allow me to do this really, really nicely, and in a more general way than I could do it over here,” usually that comes back to help you when you’ve had a new idea a year down the road. The agglutinative languages, on the other hand, tend to produce agglutinations and they are very, very difficult to untangle when you’ve had that new idea.
+>
+> Also, I think the style languages tend to be late-binding languages. The agglutinative languages are usually early-binding. That makes a huge difference in the whole approach. The kinds of bugs you have to deal with, and when you have to deal with them, is completely different.
+
+Type systems:
+
+> Some people are completely religious about type systems and as a mathematician I love the idea of type systems, but nobody has ever come up with one that has enough scope. If you combine Simula and Lisp—Lisp didn’t have data structures, it had instances of objects—you would have a dynamic type system that would give you the range of expression you need. 
+>
+> It would allow you to think the kinds of thoughts you need to think without worrying about what type something is, because you have a much, much wider range of things.
+
+La "morte" di Smalltalk con Smalltalk-80, quando è stato scoperto dagli "adulti", è stato standardizzato, diventato più "pragmatico" ed ha smesso di evolversi:
+
+> Basically what happened is this vehicle became more and more a programmer’s vehicle and less and less a children’s vehicle—the version that got put out, Smalltalk ’80, I don’t think it was ever programmed by a child. I don’t think it could have been programmed by a child because it had lost some of its amenities, even as it gained pragmatic power.
+> 
+> So the death of Smalltalk in a way came as soon as it got recognized by real programmers as being something useful; they made it into more of their own image, and it started losing its nice end-user features.
+
+Ma Squeak è nato per porvi rimedio (*implementation vehicle*). Non preoccupiamoci degli altri che lo fanno nel modo sbagliato. Sappiamo come programmare.
+
+> But that’s OK. This project that we started in 1995 was to make Squeak as an implementation vehicle for another end-user system for children. That was done quite well and is being used by many, many thousands of children around the world. The other way of looking at this is to realize that computers are made to be programmed by human beings. Let’s just roll our own. Let’s not complain about Java, or even about Smalltalk.
+>
+> In fact, let’s not even worry about Java. Let’s not complain about Microsoft. Let’s not worry about them because we know how to program computers, too, and in fact we know how to do it in a meta-way. We can set up an alternative point of view, and we’re not the only ones who do this, as you’re well aware.
+>
+> There are numerous examples on the Internet of people who have gone to one level or another by making their own point of view. Squeak is the most comprehensive because it spans the whole field. It doesn’t require any particular operating system to run because it’s self-sufficient and has a full set of tools and applications and so forth, but there are many interesting functional languages, particularly in Europe, that are of interest.
+
+Programming languages as user-interface design:
+
+> Even if you’re designing for professional programmers, in the end your programming language is basically a user-interface design. You will get much better results regardless of what you’re trying to do if you think of it as a user-interface design. PARC is incorrectly credited with having invented the GUI. Of course, there were GUIs in the ’60s. But I think we did do one good thing that hadn’t been done before, and that was to realize the idea of change being eternal.
+
+Change is eternal, so GUIs have to change along with the user and be a *learning environment*:
+
+> Corporate buyers often buy in terms of feature sets. But at PARC our idea was, since you never step in the same river twice, the number-one thing you want to make the user interface be is a learning environment—something that’s explorable in various ways, something that is going to change over the lifetime of the user using this environment. New things are going to come on, and what does it mean for those new things to happen?
+>
+> This means improvements not only in the applications but also in the user interface itself. Some of those ideas were quite manifest in the original Macintosh, but are much less manifest in the Macs of today—and of course never really made it to Microsoft. That just wasn’t their way of thinking about things, and I think a programming language is the same way. Even if the user is an absolute expert, able to remember almost everything, I’m always interested in the difference between what you might call stark meaning and adjustable meaning.
+
+Meccanismi del linguaggio, contesti e creatività: 
+
+> I did quite a bit of study on that over the years to understand the influence of having something that you can read. It’s known that our basic language mechanism for both reading and hearing has a fast and a slow process. The fast process has basically a surface phrasal-size nature, and then there’s a slower one. This is why jokes require pauses; the joke is actually a jump from one context to another, and the slower guy, who is dealing with the real meanings, has to catch up to it. There have been many, many studies of this. This argues that the surface form of a language, whatever it is, has to be adjustable in some form.
+
+> Most creativity is a transition from one context into another where things are more surprising. There’s an element of surprise, and especially in science, there is often laughter that goes along with the “Aha.” Art also has this element. Our job is to remind us that there are more contexts than the one that we’re in—the one that we think is reality.
+
+Linguaggi estendibili:
+
+> In the ’60s, one of the primary goals of the computer science community was to arrive at an extensible language. As far as I know, only three ever actually worked, and the first Smalltalk was one of those three.
+
+> One of the things that people realized from these extensible languages is that there is the unfortunate difficulty of making the meta-system easy to use. Smalltalk-72 was actually used by children. You’re always extending the language without realizing it when you are making ordinary classes. The result of this was that you didn’t have to go into a more esoteric place like a compiler compiler—Yacc or something like that—to add some extension to the language.
+>
+> But the flip side of the coin was that even good programmers and language designers tended to do terrible extensions when they were in the heat of programming, because design is something that is best done slowly and carefully.
+
+Sull'uso efficace dei meta-sistemi:
+
+> [late-night extensible programming is unsupportable] So Smalltalk actually went from something that was completely extensible to one where we picked a syntax that allowed for a variety of forms of what was fixed, and concentrated on the extensibility of meaning in it.
+>
+> This is not completely satisfactory. One of the things that I think should be done today is to have a fence that you have to hop to forcibly remind you that you’re now in a meta-area—that you are now tinkering with the currency system itself, you are not just speculating. But it should allow you to do it without any other overhead once you’ve crossed this fence, because when you want to do it, you want to do it.
+
+Innovazione nell'informatica:
+
+> I had the world’s greatest group, and I should have made the world’s two greatest groups. I didn’t realize there are benefits to having real implementers and real users, and there are benefits to starting from scratch every few months. I hired finishers because I’m a good starter and a poor finisher, but it took me a long time to realize that I was interfering with them by trying to improve things.
+>
+> I believe that the only kind of science computing can be is like the science of bridge building. Somebody has to build the bridges and other people have to tear them down and make better theories, and you have to keep on building bridges.
+
 ## Storia ##
 Perchè allora è diventata mainstream un'idea "corrotta" della programmazione orientata ad oggetti? Una possibile spiegazione la dà [Ralph Johnson][oopWrongPath]:
 
