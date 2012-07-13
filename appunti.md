@@ -3,7 +3,6 @@
 ## TODO ##
 - Rationale OOP (vantaggi)
 - design frattale, small virtual machines
-- Link a paper sulla storia di smalltalk e dell'OOP
 - Mia definizione/summary del reale OOP/object thinking
 - Conseguenze dell'object-thinking: object design (esempi)
 - Critiche
@@ -321,6 +320,37 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 
 > One of the things that always happen when you get an idea and it comes out and it's too radical for most people. Most people don't adopt the whole thing, they take a piece of it and then you get this approximation.
 
+## justObjects ##
+> If the only tool you have is a hammer, every problem looks like a nail.
+> -- Abraham Maslow
+
+Corollario di Rick:
+
+> If every tool you've SEEN is a hammer every tool looks like a hammer.
+
+In principio era tutto:
+
+- Dati in-out
+- Programmi (boxes) per trasformare input in output
+
+Programmazione strutturata.
+
+Papers presented at OOPSLA 1987: 
+
+- "Dimension of object based design" - Wegner
+- "Constraint based programming" - Borning
+- "Self" - Ungar (techniques used for HotSpot)
+- Delegation vs. inheritance "Treaty of Orlando"
+
+> In 1985 Luca Cardelli and Peter Wegner, my advisor, published an ACM Computing Surveys paper called "On understanding types, data abstraction, and polymorphism".
+>
+> Their work kicked off a flood of research on semantics and type theory for object-oriented programming, wich continues to this day. Despite 25 years of research, there is still widespread confusion about the two forms of data abstraction, abstract data types and objects.
+- [On Understanding Data Abstraction, Revisited](http://www.cs.utexas.edu/~wcook/Drafts/2009/essay.pdf) by William R. Cook
+
+ADT e oggetti come concepiti da Smalltalk e Ruby sono due cose diverse.
+
+- ADT: allow controlled data variation (Fortran, COBOL, etc. ce l'hanno). Esempi: Integer, String, sono astrazioni i cui dettagli implementativi sono resi irrilevanti (circa) ai fini del loro uso.
+
 ## Riferimenti ##
 - [Dr. Alan Kay on the Meaning of "Object-Oriented Programming"][oop]
 - [Uniform Access Principle][uap], vedere anche la [pagina](https://en.wikipedia.org/wiki/Uniform_access_principle) di Wikipedia corrispondente
@@ -329,12 +359,12 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 - [The computer revolution hasn't happened yet][computerRevolution], il [video](http://video.google.com/videoplay?docid=-2950949730059754521) del relativo talk all'OOPSLA del '97.
 - [Execution in the kingdom of nouns](http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html)
 - [A conversation with Alan Kay][kayConversation]
+- [Early History Of Smalltalk][historySmalltalk] (c'è anche una [versione](http://propella.sakura.ne.jp/earlyHistoryST/EarlyHistoryST.html) più semplice da leggere ma senza le figure)
 
 ### Da riferire ###
 - [Storia del termine OOP][historyOOP]
 - [A Laboratory For Teaching Object-Oriented Thinking][laboratoryOOP]
 - ["On the Criteria To Be Used in Decomposing Systems into Modules" by D.L. Parnas][modulesParnas]
-- [Early History Of Smalltalk][historySmalltalk] (c'è anche una [versione](http://propella.sakura.ne.jp/earlyHistoryST/EarlyHistoryST.html) più semplice da leggere ma senza le figure)
 - [Design Principles Behind Smalltalk][designPrinciplesSmalltalk]
 - [Problems With Existing OOP Evidence][problemsOOP]
 - [L'arte perduta di pensare ad oggetti](http://matteo.vaccari.name/blog/archives/723), c'è anche il [video][OOPVaccari].
@@ -343,7 +373,7 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 - [Name Objects after things, not actions!](http://matteo.vaccari.name/blog/archives/743)
 - [Classess without faces](http://matteo.vaccari.name/blog/archives/700) Esempio nomenclatura
 - [On the folly of representing a first name with a String](http://matteo.vaccari.name/blog/archives/685) Esempio design form
-- [Objects are just objects, aren't they?](http://www.confreaks.com/videos/461-rubyconf2010-objects-are-just-objects-aren-t-they)
+- [Objects are just objects, aren't they?][justObjects]
 
 [oop]: http://www.purl.org/stefan_ram/pub/doc_kay_oop_en
 [uap]: martinfowler.com/bliki/UniformAccessPrinciple.html
@@ -353,10 +383,11 @@ Perchè allora è diventata mainstream un'idea "corrotta" della programmazione o
 [computerRevolution]: http://blog.moryton.net/2007/12/computer-revolution-hasnt-happened-yet.html
 [kingdomNouns]: http://steve-yegge.blogspot.it/2006/03/execution-in-kingdom-of-nouns.html
 [kayConversation]: http://queue.acm.org/detail.cfm?id=1039523
+[historySmalltalk]: http://www.iam.unibe.ch/~ducasse/FreeBooks/SmalltalkHistoryHOPL.pdf
+[justObjects]: http://www.confreaks.com/videos/461-rubyconf2010-objects-are-just-objects-aren-t-they
 
 [laboratoryOOP]: http://c2.com/doc/oopsla89/paper.html
 [modulesParnas]: http://sunnyday.mit.edu/16.355/parnas-criteria.html
-[historySmalltalk]: http://www.iam.unibe.ch/~ducasse/FreeBooks/SmalltalkHistoryHOPL.pdf
 [designPrinciplesSmalltalk]: http://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html
 [problemsOOP]: http://c2.com/cgi/wiki?ProblemsWithExistingOopEvidence
 [OOPVaccari]: https://www.youtube.com/watch?v=jO6Z3wOdfWc
