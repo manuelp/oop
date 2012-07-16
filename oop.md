@@ -14,9 +14,49 @@ Nella seconda parte, una volta chiarita la *forma mentis* e l'essenza dell'OOP, 
 Infine, esamineremo alcuni esempi reali di applicazione della programmazione ad oggetti.
 
 ## Definizione ##
+virtual machines/servers, biological cells only able to communicate through messages
+
+bio/net non-data-procedure
+
+parts with the same power of the whole (fractal design):
+
+> “real computers all the way down (RCATWD)” --[Alan Kay][kayInterview]
+
+- messaging
+- local retention and protection and hiding of state-process (encapsulation, no data)
+- extreme late-binding of all things (xenoagnosis, only public interfaces, no ADT)
+
+Obiettivo: 
+
+> protected and interchangeable modules to make highly scalable systems --[Alan Kay][kayInterview]
+
+Everything is an object
+
+----
+
+Da [The computer revolution hasn't happened yet][computerRevolution]:
+
+Un modo di pensare, progettare e realizzare sistemi software complessi. Gestione della complessità. Caratteristiche:
+
+- Modularità
+- Estensibilità
+- Riusabilità
+
+Reale significato e conseguenze, non buzz-words.
+
+Un approccio non-funzionale, *strutturale*.
+
+- Data abstraction (bio/net: data hiding & messaging)
+- Meta-programming
+
 ## Storia ##
 ## Principi ##
 ## Esempi ##
 ### Controllers ###
 ### PE ###
 ## Riferimenti ##
+- [A to Z of programming languages: Smalltalk-80][kayInterview]
+- [The computer revolution hasn't happened yet][computerRevolution], il [video](http://video.google.com/videoplay?docid=-2950949730059754521) del relativo talk all'OOPSLA del '97.
+
+[kayInterview]: http://www.computerworld.com.au/article/print/352182/z_programming_languages_smalltalk-80
+[computerRevolution]: http://blog.moryton.net/2007/12/computer-revolution-hasnt-happened-yet.html

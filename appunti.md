@@ -101,7 +101,6 @@ Concetto di "new" e "news":
 >
 >So “New” is often rejected outright, or is accepted only by denaturing it into “News”. For example, the big deal about computers is their programmability, and the big deal about that is “meta”.
 
-
 ## computerRevolution ##
 > I made up the term object-oriented, and I can tell you I did not have C++ in mind.
 
