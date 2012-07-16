@@ -8,6 +8,9 @@
 - Critiche
 - Citare [Anti-if campaign](http://www.antiifcampaign.com/)
 - Cenno degli Actors
+- Solid
+
+- dualità object-oriented programming e design (object thinking).
 
 ## Smalltalk ##
 http://www.squeak.org/Smalltalk/
@@ -450,12 +453,13 @@ Oggetto intelligente, che può avere rappresentazioni multiple relative a UI div
 - ["On the Criteria To Be Used in Decomposing Systems into Modules" by D.L. Parnas][modulesParnas]
 - [Problems With Existing OOP Evidence][problemsOOP]
 - [L'arte perduta di pensare ad oggetti](http://matteo.vaccari.name/blog/archives/723), c'è anche il [video][OOPVaccari].
+- [Objects are just objects, aren't they?][justObjects]
 
 - http://www.bonkersworld.net/object-world/
 - [Name Objects after things, not actions!](http://matteo.vaccari.name/blog/archives/743)
 - [Classess without faces](http://matteo.vaccari.name/blog/archives/700) Esempio nomenclatura
 - [On the folly of representing a first name with a String](http://matteo.vaccari.name/blog/archives/685) Esempio design form
-- [Objects are just objects, aren't they?][justObjects]
+
 
 [oop]: http://www.purl.org/stefan_ram/pub/doc_kay_oop_en
 [uap]: martinfowler.com/bliki/UniformAccessPrinciple.html
