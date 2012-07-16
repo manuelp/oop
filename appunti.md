@@ -7,6 +7,22 @@
 - Conseguenze dell'object-thinking: object design (esempi)
 - Critiche
 - Citare [Anti-if campaign](http://www.antiifcampaign.com/)
+- Cenno degli Actors
+
+## Smalltalk ##
+http://www.squeak.org/Smalltalk/
+
+>Smalltalk is a pure object-oriented language, simple and uniform. Smalltalk influenced most of the modern object-oriented languages, although most of the time they missed Smalltalk's elegance and simplicity.
+>
+>The syntax of Smalltalk fits into one postcard and the object model is simple:
+>
+>  - Everything is an object.
+>  - Objects communicate via message passing.
+>  - Classes describe in terms of state (instance variables) and behavior (methods) the objects they generate.
+>  - When an object receives a message, the corresponding method is looked up in the class (and superclass) of the receiver.
+>  - Methods are public.
+>  - Instance variables are private.
+>  - Classes inherit via single inheritance.
 
 ## historySmalltalk ##
 > I just decided to leave inheritance out as a feature in Smalltalk-72, knowing that we could simulate it back using Smalltalk’s LISPlike flexibility. The biggest contributor to these AI ideas was Larry Tesler who used what is now called “slot inheritance” extensively in his various versions of early desktop publishing systems. Nowadays, this would be called a “delegation-style” inheritance scheme.
@@ -350,6 +366,72 @@ Papers presented at OOPSLA 1987:
 ADT e oggetti come concepiti da Smalltalk e Ruby sono due cose diverse.
 
 - ADT: allow controlled data variation (Fortran, COBOL, etc. ce l'hanno). Esempi: Integer, String, sono astrazioni i cui dettagli implementativi sono resi irrilevanti (circa) ai fini del loro uso.
+- Smalltalk objects: modularity by encapsulation. Modulare nel senso che sia possibile cambiare alcuni componenti/moduli per cambiare il funzionamento del programma senza che il resto del programma stesso ne sia affetto. *Localizzazione delle modifiche* (protezione dalle stesse: OCP).
+
+Separando logica e dati si finisce per ottenere parti meno potenti del tutto. Se invece si decompone un programma (progetta) utilizzando come blocchi costituitivi *oggetti intelligenti che comunicano tramite messaggi che incapsulano i dati ed espongono comportamenti*, si ottiene un sistema modulare e si riesce a gestire meglio la complessità (quindi si possono costruire sistemi più complessità). **Design frattale**.
+
+Esempi: internet, circuiti elettrici, *noi*.
+
+Oggetti scritti in linguaggi diversi (virtual machines).
+
+Sempre dal paper di Cook, riguardo la differenza di queste due visioni:
+
+> Most groups eventually work through the differences between objects and ADTs, but I can tell they walk away feeling uneasy, as if some familiar signposts now point in different directions. One source of unease is that the foundamental distinctions are obscured, but not eliminated, in real programming languages. Also, the story is quite comples and multi-faceted.
+
+Il problema è che certi linguaggi danno l'illusione di lavorare con "oggetti" reali quando in realtà si lavora solo con certi aspetti di essi (ADT) e alcune delle meccaniche in gioco.
+
+TODO: Esempi?
+
+La prima versione di Smalltalk (tanto per dire), non aveva nozione di classi e neanche di ereditarietà: oggetti puri che comunicano tramite messaggi. Non aveva nemmeno le segnature dei "metodi".
+
+Successivamente:
+
+- Furono introdotte le segnature dei metodi per facilitare la comprensione degli esseri umani.
+- Le classi furono introdotte per permettere l'esistenza di più oggetti che condividono la stessa implementazione.
+- Ereditarietà: per permettere la programmazione in termini di similitudini e differenze tra oggetti in base al "tipo".
+
+Tuttavia, non è mai stato fatto alcun accenno a "gerarchie di tipi" (type hierarchies).
+
+Evoluzione di smalltalk come [esperimento scientifico][designPrinciplesSmalltalk].
+
+Definizione di *oggetti* OO secondo Cook:
+
+- Objects have a hidden representation, and a reference.
+- Interfaces expressed as a dispatch procedure, the compiler doesn't know or need to know representational details.
+- This allows free mixture of objects with different representations filling a given 'role'.
+
+La differenza con gli ADT è che di un oggetto si ha il *riferimento* ma non si sa e non si ha bisogno di sapere *nulla* del suo "tipo" nè tantomento della sua rappresentazione interna.
+
+(Java interfaces? Non proprio, c'è ancora il "tipo" di mezzo, che poi in questo senso divernta un *ruolo*).
+
+Metafora:
+
+- ADT. Monarchi che devono condividere una caratteristica (implementazione) comune
+- Oggetti. Presidenti, chiunque può esserlo (almeno in teoria) senza dover condividere alcun dettaglio implementativo o ereditare alcunchè (duck-typing). Roles.
+
+In altre parole: *xenoagnosis*.
+
+> To me, the prohibition of inspecting the representation of other objects is one of the defining characteristics of object oriented programming. I term this autognostic principle:
+>
+>    An object can only access other objects through their public interfaces.
+>
+> Autognosis means 'self knowledge'. An autognostic object can only have detailed knowledge of itself. All other pbjects are abstract.
+>
+> The converse is quite useful: any programming model that allows inspection of the representation of more that one abstraction at a time is not object-oriented.
+
+Da notare che il paper in questione non fa menzione di classi o ereditarietà. E' questa nozione di xenoagnosi a tempo di compilazione.
+
+Everything is an object (Java: più o meno). Le interfacce di Java sono ancora tipizzate, si collocano in una gerarchia di tipi.
+
+TDD: ottenere oggetti che hanno il giusto *comportamento*, che poi possono essere fatti comunicare tra loro.
+
+Inoltre in un contesto OO è più facile fare refactoring e non è necessario mantenere gerarchie di tipi (quindi è meno necessario farlo spesso, e comunque non è necessario un IDE per renderlo possibile in modo conveniente).
+
+## Problema ##
+Oggetto intelligente, che può avere rappresentazioni multiple relative a UI diverse. Chi si occupa della rappresentazione?
+
+- L'oggetto stesso: deve rispondere a n messaggi con n rappresentazioni diverse. In definitiva l'oggetto deve quindi in qualche modo essere "cosciente" della UI o quantomeno delle esigenze delle stesse.
+- Le diverse UI, però allora queste devono accedere ai dati incapsulati nell'oggetto il che violerebbe il principio del data-hiding (no getters).
 
 ## Riferimenti ##
 - [Dr. Alan Kay on the Meaning of "Object-Oriented Programming"][oop]
@@ -360,12 +442,12 @@ ADT e oggetti come concepiti da Smalltalk e Ruby sono due cose diverse.
 - [Execution in the kingdom of nouns](http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html)
 - [A conversation with Alan Kay][kayConversation]
 - [Early History Of Smalltalk][historySmalltalk] (c'è anche una [versione](http://propella.sakura.ne.jp/earlyHistoryST/EarlyHistoryST.html) più semplice da leggere ma senza le figure)
+- [Design Principles Behind Smalltalk][designPrinciplesSmalltalk]
 
 ### Da riferire ###
 - [Storia del termine OOP][historyOOP]
 - [A Laboratory For Teaching Object-Oriented Thinking][laboratoryOOP]
 - ["On the Criteria To Be Used in Decomposing Systems into Modules" by D.L. Parnas][modulesParnas]
-- [Design Principles Behind Smalltalk][designPrinciplesSmalltalk]
 - [Problems With Existing OOP Evidence][problemsOOP]
 - [L'arte perduta di pensare ad oggetti](http://matteo.vaccari.name/blog/archives/723), c'è anche il [video][OOPVaccari].
 
