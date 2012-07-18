@@ -155,7 +155,7 @@ Sulla scalabilità di questo modello (internet):
 
 > you can also apply it to the building of the language itself. The more the language can see its own structures, the more liberated you can be from the tyranny of a single implementation. I think this is one of the most critical things that very few people are worrying about in a practical form. 
 
-In pratica, il problema che si pone Alan è l'interoperabilità tra tutti i diversi sistemi ad oggetti che sono simili nei principi ma differenti nei dettagli pragmatici. Ed ecco quindi una realizzazione riguardo internet e gli "object systems", un *universal interface language* (che non è un linguaggio di programmazione in sè e per sè.
+In pratica, il problema che si pone Alan è l'interoperabilità tra tutti i diversi sistemi ad oggetti che sono simili nei principi ma differenti nei dettagli pragmatici. Ed ecco quindi una realizzazione riguardo internet e gli "object systems", un *universal interface language* (che non è un linguaggio di programmazione in sè e per sè).
 
 > If you think about what a URL actually is, and you think of what an HTTP message actually is, and if you think of what an object actually is, and if you think of what an object oriented pointer actually is, I think it should be pretty clear that any object-oriented language can internalize its own local pointers to any object in the world, regardless of where it was made. That's the whole point of not being able to see inside. A semantic interoperability is possible almost immediately by simply taking that stance. This is gonna change, really everything. [...] This is going to lead to a universal interface language, which is not a programming language per se. It's more like a prototyping language that allows an interchange of deep information about what objects think they can do. It allows objects to make experiments with other objects in a safe way to see how they respond to various messages. This is going to be a critical thing to automate in the next ten years.
 
@@ -434,6 +434,8 @@ Oggetto intelligente, che può avere rappresentazioni multiple relative a UI div
 
 - L'oggetto stesso: deve rispondere a n messaggi con n rappresentazioni diverse. In definitiva l'oggetto deve quindi in qualche modo essere "cosciente" della UI o quantomeno delle esigenze delle stesse.
 - Le diverse UI, però allora queste devono accedere ai dati incapsulati nell'oggetto il che violerebbe il principio del data-hiding (no getters).
+
+Secondo la [filosofia di Smalltalk][smalltalkDesignPrinciples] è la prima opzione quella corretta.
 
 ## Riferimenti ##
 - [Dr. Alan Kay on the Meaning of "Object-Oriented Programming"][oop]
