@@ -28,6 +28,13 @@ Una buona metafora per coglierne l'essenza sono i sistemi biologici (cellule) e 
 
 > “real computers all the way down (RCATWD)” --[Alan Kay][kayInterview]
 
+Di conseguenza è un approccio di *design* che entra in gioco molto prima della scrittura del codice (quindi al di sopra di mere meccaniche e tecniche di programmazione). I vantaggi principali sono non-funzionali e sono di tipo *strutturale*. Nel [GOOS][goos] si parla di due tipi di qualità relativi al software:
+
+- **Esterna**: il concetto di qualità dal punto di vista degli utenti finali, ovvero se l'applicazione fa ciò che desiderano in modo gradevole, veloce e senza errori.
+- **Interna**: la *struttura* sottostante del software, riguarda il codice e come è organizzato. Flessibilità, modularità, resilienza, etc.
+
+Un software per essere *sostenibile* oltre che utilizzabile deve avere entrambi questi tipi di qualità e l'approccio OO aiuta molto a mantenere un'alta qualità interna (per svilupparla unitamente alla qualità esterna esistono approcci come il TDD/BDD).
+
 Lo scopo quindi è *gestire la complessità* dei sistemi software permettendo la realizzazione di applicazioni molto complesse mantenendo caratteristiche di:
 
 - Modularità
@@ -62,31 +69,6 @@ Purtroppo, a Java manca questa distinzione e (a meno di accrocchi come l'auto-bo
     String a = "hello";
     String b = "hello";
     a == b // -> false
-
-----
-
-xenoagnosi
-
-- web of (intelligent) objects (virtual machines), xenoagnosis
-
-Tutto è un oggetto, ma ne esistono di due tipi fondamentali:
-
-- Identità
-- Valori
-
-----
-
-
-Di conseguenza è un approccio di *design* che entra in gioco molto prima della scrittura del codice (quindi al di sopra di mere meccaniche e tecniche di programmazione). 
-
-I vantaggi principali sono non-funzionali e sono di tipo *strutturale*. Nel [GOOS][goos] si parla di due tipi di qualità relativi al software:
-
-- **Esterna**: il concetto di qualità dal punto di vista degli utenti finali, ovvero se l'applicazione fa ciò che desiderano in modo gradevole, veloce e senza errori.
-- **Interna**: la *struttura* sottostante del software, riguarda il codice e come è organizzato. Flessibilità, modularità, resilienza, etc.
-
-Un software per essere *sostenibile* oltre che utilizzabile deve avere entrambi questi tipi di qualità e l'approccio OO aiuta molto a mantenere un'alta qualità interna (per svilupparla unitamente alla qualità esterna esistono approcci come il TDD/BDD).
-
-L'approccio è nato per *gestire la complessità* dei sistemi software.
 
 ## Appunti definizione ##
 virtual machines/servers, biological cells only able to communicate through messages
@@ -152,6 +134,35 @@ Esempi: internet, circuiti elettrici, *noi*.
 
 Oggetti scritti in linguaggi diversi (virtual machines).
 
+TDD: ottenere oggetti che hanno il giusto *comportamento*, che poi possono essere fatti comunicare tra loro.
+
+----
+
+Da [GOOS][goos]:
+
+- Coupling: late-binding, *messaging*
+- Coesion: encapsulation
+
+Well designed: *behaviour* (organizing principle) is easy to change.
+
+OOP: web of collaborating objects loosely couples and highly cohesive, organized by *responsibilities* (goals, services, roles) NON nouns.
+
+Modularized around *functions* [more likely to change][parnasModules].
+
+Emergent behaviour, complex systems.
+
+System construction/wiring: declarative. Can be *self-healing* (fault-tolerance, flexibility, etc. See "Let it crash philosophy (Erlang) & the actor model).
+
+Message from A object to B object: A has a *goal* that B can carry on. Interfaccia, NON tipo (duck-typing, messaging).
+
+Perchè?
+
+- Interazioni esplicite
+- Demeter's Law, encapsulation (of data/state)
+- Flessibilità
+
+## Storia ##
+## Differenze con l'approccio ADT ##
 Definizione di *oggetti* OO secondo [Cook][cook]:
 
 - Objects have a hidden representation, and a reference.
@@ -181,43 +192,6 @@ Da notare che il paper in questione non fa menzione di classi o ereditarietà. E
 
 Everything is an object (Java: più o meno). Le interfacce di Java sono ancora tipizzate, si collocano in una gerarchia di tipi.
 
-TDD: ottenere oggetti che hanno il giusto *comportamento*, che poi possono essere fatti comunicare tra loro.
-
-----
-
-Da [GOOS][goos]:
-
-- Coupling: late-binding, *messaging*
-- Coesion: encapsulation
-
-Well designed: *behaviour* (organizing principle) is easy to change.
-
-OOP: web of collaborating objects loosely couples and highly cohesive, organized by *responsibilities* (goals, services, roles) NON nouns.
-
-Modularized around *functions* [more likely to change][parnasModules].
-
-Emergent behaviour, complex systems.
-
-System construction/wiring: declarative. Can be *self-healing* (fault-tolerance, flexibility, etc. See "Let it crash philosophy (Erlang) & the actor model).
-
-- Value: treated functionally
-
-    new Integer(6) != new Integer(6)
-    String a = "hello";
-    String b = "hello";
-    a != b
-
-- Identity: cell
-
-Message from A object to B object: A has a *goal* that B can carry on. Interfaccia, NON tipo (duck-typing, messaging).
-
-Perchè?
-
-- Interazioni esplicite
-- Demeter's Law, encapsulation (of data/state)
-- Flessibilità
-
-## Storia ##
 ## Principi ##
 ## Esempi ##
 ### Controllers ###
