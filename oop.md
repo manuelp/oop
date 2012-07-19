@@ -127,3 +127,4 @@ TDD: ottenere oggetti che hanno il giusto *comportamento*, che poi possono esser
 [historyOOP]: http://programmers.stackexchange.com/a/142330
 [justObjects]: http://www.confreaks.com/videos/461-rubyconf2010-objects-are-just-objects-aren-t-they
 [cook]: http://www.cs.utexas.edu/~wcook/Drafts/2009/essay.pdf
+[historySmalltalk]: http://www.iam.unibe.ch/~ducasse/FreeBooks/SmalltalkHistoryHOPL.pdf
