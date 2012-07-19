@@ -108,6 +108,40 @@ Everything is an object (Java: più o meno). Le interfacce di Java sono ancora t
 
 TDD: ottenere oggetti che hanno il giusto *comportamento*, che poi possono essere fatti comunicare tra loro.
 
+----
+
+Da [GOOS][goos]:
+
+- Coupling: late-binding, *messaging*
+- Coesion: encapsulation
+
+Well designed: *behaviour* (organizing principle) is easy to change.
+
+OOP: web of collaborating objects loosely couples and highly cohesive, organized by *responsibilities* (goals, services, roles) NON nouns.
+
+Modularized around *functions* [more likely to change][parnasModules].
+
+Emergent behaviour, complex systems.
+
+System construction/wiring: declarative. Can be *self-healing* (fault-tolerance, flexibility, etc. See "Let it crash philosophy (Erlang) & the actor model).
+
+- Value: treated functionally
+
+    new Integer(6) != new Integer(6)
+    String a = "hello";
+    String b = "hello";
+    a != b
+
+- Identity: cell
+
+Message from A object to B object: A has a *goal* that B can carry on. Interfaccia, NON tipo (duck-typing, messaging).
+
+Perchè?
+
+- Interazioni esplicite
+- Demeter's Law, encapsulation (of data/state)
+- Flessibilità
+
 ## Storia ##
 ## Principi ##
 ## Esempi ##
@@ -120,6 +154,8 @@ TDD: ottenere oggetti che hanno il giusto *comportamento*, che poi possono esser
 - [Early History Of Smalltalk][historySmalltalk] (c'è anche una [versione](http://propella.sakura.ne.jp/earlyHistoryST/EarlyHistoryST.html) più semplice da leggere ma senza le figure)
 - [Objects are just objects, aren't they?][justObjects]
 - [On Understanding Data Abstraction, Revisited][cook] by William R. Cook
+- [Growing Object-Oriented Software Guided By Tests][goos] by Nat Pryce e Steve Freeman
+- [On the Criteria To Be Used in Decomposing Systems into Modules][parnasModules], D.L. Parnas, Carnegie-Mellon University, disponibile anche in formato [html](http://sunnyday.mit.edu/16.355/parnas-criteria.html)
 
 [kayInterview]: http://www.computerworld.com.au/article/print/352182/z_programming_languages_smalltalk-80
 [computerRevolution]: http://blog.moryton.net/2007/12/computer-revolution-hasnt-happened-yet.html
@@ -128,3 +164,5 @@ TDD: ottenere oggetti che hanno il giusto *comportamento*, che poi possono esser
 [justObjects]: http://www.confreaks.com/videos/461-rubyconf2010-objects-are-just-objects-aren-t-they
 [cook]: http://www.cs.utexas.edu/~wcook/Drafts/2009/essay.pdf
 [historySmalltalk]: http://www.iam.unibe.ch/~ducasse/FreeBooks/SmalltalkHistoryHOPL.pdf
+[goos]: http://www.growing-object-oriented-software.com/
+[parnasModules]: http://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf
