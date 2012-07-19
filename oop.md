@@ -198,16 +198,16 @@ Everything is an object (Java: più o meno). Le interfacce di Java sono ancora t
 ### PE ###
 ## Riferimenti ##
 - [Dr. Alan Kay on the Meaning of "Object-Oriented Programming"][oop]
-- [A to Z of programming languages: Smalltalk-80][kayInterview]
-- [The computer revolution hasn't happened yet][computerRevolution], il [video](http://video.google.com/videoplay?docid=-2950949730059754521) del relativo talk all'OOPSLA del '97.
+- [A to Z of programming languages: Smalltalk-80][kayInterview]: intervista ad Alan Kay
+- [The computer revolution hasn't happened yet][computerRevolution] ed il [video](http://video.google.com/videoplay?docid=-2950949730059754521) del relativo talk all'OOPSLA del '97.
 - [Design Principles Behind Smalltalk][designPrinciplesSmalltalk]
-- [Early History Of Smalltalk][historySmalltalk] (c'è anche una [versione](http://propella.sakura.ne.jp/earlyHistoryST/EarlyHistoryST.html) più semplice da leggere ma senza le figure)
-- [Objects are just objects, aren't they?][justObjects]
-- [On Understanding Data Abstraction, Revisited][cook] by William R. Cook
-- [Growing Object-Oriented Software Guided By Tests][goos] by Nat Pryce e Steve Freeman
+- [Early History Of Smalltalk][historySmalltalk] (c'è anche una versione [HTML](http://propella.sakura.ne.jp/earlyHistoryST/EarlyHistoryST.html)
+- [Objects are just objects, aren't they?][justObjects], Rick DeNatale
+- [On Understanding Data Abstraction, Revisited][cook], William R. Cook
+- [Growing Object-Oriented Software Guided By Tests][goos], Nat Pryce e Steve Freeman
 - [On the Criteria To Be Used in Decomposing Systems into Modules][parnasModules], D.L. Parnas, Carnegie-Mellon University, disponibile anche in formato [html](http://sunnyday.mit.edu/16.355/parnas-criteria.html)
-- [Object Thinking][objectThinking] by David West
-- [Definizione di Duck-Typing][duckTyping]
+- [Object Thinking][objectThinking], David West
+- [Definizione di Duck-Typing][duckTyping], Wikipedia
 
 [kayInterview]: http://www.computerworld.com.au/article/print/352182/z_programming_languages_smalltalk-80
 [computerRevolution]: http://blog.moryton.net/2007/12/computer-revolution-hasnt-happened-yet.html
