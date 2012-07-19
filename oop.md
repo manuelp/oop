@@ -55,8 +55,10 @@ Riprendendo quindi la definizione iniziale:
 > Concezione dei sistemi software come una rete di agenti autonomi intelligenti che incapsulano il proprio stato e forniscono *servizi* (esibiscono comportamenti) comunicando con gli altri tramite messaggi, seguendo un design frattale.
 
 - Agenti autonomi e intelligenti: oggetti
-- In rete che forniscono servizi ad altri oggetti: messaging, extreme late-binding
-- Incapsulano il proprio stato: data-hiding, encapsulation
+- In rete che forniscono servizi ad altri oggetti: messaging, extreme late-binding, *loose coupling*
+- Incapsulano il proprio stato: data-hiding, encapsulation, *high cohesion*
+
+Quindi il *principio organizzatore* del design che emerge da questa visione sono i *comportamenti* degli oggetti ed i rispettivi *ruoli* che espletano per i propri vicini... TODO(GOOS)
 
 ### Tipi di oggetto ###
 Tutto è un oggetto, ma ne esistono di due tipi differenti:
@@ -70,37 +72,7 @@ Purtroppo, a Java manca questa distinzione e (a meno di accrocchi come l'auto-bo
     String b = "hello";
     a == b // -> false
 
-## Appunti definizione ##
-virtual machines/servers, biological cells only able to communicate through messages
-
-bio/net non-data-procedure
-
-parts with the same power of the whole (fractal design):
-
-> “real computers all the way down (RCATWD)” --[Alan Kay][kayInterview]
-
-- messaging
-- local retention and protection and hiding of state-process (encapsulation, no data)
-- extreme late-binding of all things (xenoagnosis, only public interfaces, no ADT)
-
-Obiettivo: 
-
-> protected and interchangeable modules to make highly scalable systems --[Alan Kay][kayInterview]
-
-Everything is an object
-
-----
-
-Da [The computer revolution hasn't happened yet][computerRevolution]:
-
-Un modo di pensare, progettare e realizzare sistemi software complessi. Gestione della complessità. Caratteristiche:
-
-- Modularità
-- Estensibilità
-- Riusabilità
-
-Reale significato e conseguenze, non buzz-words.
-
+## Appunti ##
 Un approccio non-funzionale, *strutturale*.
 
 - **Data abstraction** (bio/net: data hiding/encapsulation/objects & messaging/late-binding), late-binding che permette l'estensibiltà e l'indipendenza dai dettagli implementativi (ovvero un modo per *partizionare* il sistema stile divide-et-impera e rendere NON necessario il comprenderlo tutto). *Ma*, ovvero non tanto orientata agli oggetti quanto alle interazioni tra di essi (*process oriented*). Design frattale. Ogni oggetto come server con un proprio URL ed eventualmente interfaccia/controllo grafico/presentazione ([concezione di Smalltalk][designPrinciplesSmalltalk]). Replicazione della scalabilità di internet e degli organismi viventi. Cenno al modello degli *actors*.
@@ -111,16 +83,6 @@ Poche realizzazioni per costruire cose complesse con poco materiale (cattedrale 
 ----
 
 - *comportamento*, non dati e procedure
-
-----
-
-> The problem here is more a perspective/mindset one I think. As far as I understand object thinking, it's all about fractal design and messages between intelligent objects (that are like little virtual machines). The concept of "dumb object" seems to me in contrast with this vision. I don't say that it's absolutely wrong, but IMHO it's wrong in the context of object thinking and design. 
-
-Modo di pensare che produce una *decomposizione* del sistema molto diversa da quella prodotta secondo il paradigma procedurale (cita Object Thinking).
-
-----
-
-Da [Alan Kay][historySmalltalk]: sistemi progettati come **comunità di agenti autonomi che forniscono *comportamenti* (servizi)**, e costituiscono quindi una *simulazione del problema* (e della relativa soluzione).
 
 ----
 
@@ -148,8 +110,6 @@ Well designed: *behaviour* (organizing principle) is easy to change.
 OOP: web of collaborating objects loosely couples and highly cohesive, organized by *responsibilities* (goals, services, roles) NON nouns.
 
 Modularized around *functions* [more likely to change][parnasModules].
-
-Emergent behaviour, complex systems.
 
 System construction/wiring: declarative. Can be *self-healing* (fault-tolerance, flexibility, etc. See "Let it crash philosophy (Erlang) & the actor model).
 
@@ -192,7 +152,7 @@ Da notare che il paper in questione non fa menzione di classi o ereditarietà. E
 
 Everything is an object (Java: più o meno). Le interfacce di Java sono ancora tipizzate, si collocano in una gerarchia di tipi.
 
-## Principi ##
+## Linee guida ##
 ## Esempi ##
 ### Controllers ###
 ### PE ###
