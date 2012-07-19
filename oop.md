@@ -14,7 +14,7 @@ Nella seconda parte, una volta chiarita la *forma mentis* e l'essenza dell'OOP, 
 Infine, esamineremo alcuni esempi reali di applicazione della programmazione ad oggetti.
 
 ## Definizione ##
-> Concezione dei sistemi software come una rete di agenti autonomi intelligenti che forniscono *servizi* (esibiscono comportamenti e incapsulano dati), rendendo possibile il design frattale.
+> Concezione dei sistemi software come una rete di agenti autonomi intelligenti che incapsulano il proprio stato e forniscono *servizi* (esibiscono comportamenti) comunicando con gli altri tramite messaggi, seguendo un design frattale.
 
 E' prima di tutto una visione, un [modo di pensare][objectThinking] che produce una *decomposizione* del sistema molto diversa da quella prodotta secondo il paradigma procedurale.
 
@@ -24,7 +24,7 @@ Una conseguenza è che *tutto è un oggetto*. Questo è il semplice concetto uni
 
 Una buona metafora per coglierne l'essenza sono i sistemi biologici (cellule) e le reti di calcolatori (come internet), che hanno entrambe la caratteristica di essere *sistemi complessi* estremamente *scalabili*. In questi sistemi, i componenti base possono essere relativamente semplici ma dalla loro interazione scaturisce un *comportamento emergente* anche estremamente complesso (a volte caotico).
 
-> I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages
+> I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages --[Alan Kay][oop]
 
 > “real computers all the way down (RCATWD)” --[Alan Kay][kayInterview]
 
@@ -37,13 +37,35 @@ Lo scopo quindi è *gestire la complessità* dei sistemi software permettendo la
 
 > \[with OOP you can create\] protected and interchangeable modules to make highly scalable systems --[Alan Kay][kayInterview]
 
-Citando [Alan Kay][historySmalltalk], le caratteristiche principali dell'approccio OO sono:
+Secondo [Alan Kay][historySmalltalk], le caratteristiche principali dell'approccio OO sono:
 
-- *Messaging*: gli oggetti comunicano esclusivamente tramite messaggi e non hanno alcun accesso allo stato degli altri oggetti con cui collabora.
-- *Local retention and protection and hiding of state-process*: incapsulamento dello stato e appunto unica comunicazione tramite messaggi senza accesso diretto.
-- *Extreme late-binding of all things* (xenoagnosi, solo interfacce pubblice, no ADT)
+- *Messaging*: gli oggetti comunicano esclusivamente tramite messaggi e non hanno alcun accesso allo stato degli altri oggetti con cui collaborano.
+- *Local retention and protection and hiding of state-process*: incapsulamento dello stato e appunto unica comunicazione tramite messaggi senza accesso diretto. L'unica cosa che gli oggetti espongono sono **comportamenti**, non il loro stato interno.
+- *Extreme late-binding of all things*: in contrasto con l'approccio ADT, [duck-typing][duckTyping].
+
+Riprendendo quindi la definizione iniziale:
+
+> Concezione dei sistemi software come una rete di agenti autonomi intelligenti che incapsulano il proprio stato e forniscono *servizi* (esibiscono comportamenti) comunicando con gli altri tramite messaggi, seguendo un design frattale.
+
+- Agenti autonomi e intelligenti: oggetti
+- In rete che forniscono servizi ad altri oggetti: messaging, extreme late-binding
+- Incapsulano il proprio stato: data-hiding, encapsulation
+
+### Tipi di oggetto ###
+Tutto è un oggetto, ma ne esistono di due tipi differenti:
+
+- *Identità*: agenti intelligenti per i quali la semantica dell'uguaglianza si basa sulla loro identità (due oggetti della stessa classe e nello stesso stato sono comunque due oggetti diversi, nel *tempo* possono assumere stati diversi).
+- *Valore*: tipicamente *immutabile* rappresenta una informazione e si manipola tipicamente con uno stile funzionale. Qui la semantica di uguaglianza si basa appunta sull'informazione che rappresenta (il numero 6, anche se rappresentato da oggetti diversi in memoria ha sempre lo stesso valore.
+
+Purtroppo, a Java manca questa distinzione e (a meno di accrocchi come l'auto-boxing/unboxing), la semantica di uguaglianza si basa sull'identità per ogni tipo di oggetto:
+
+    String a = "hello";
+    String b = "hello";
+    a == b // -> false
 
 ----
+
+xenoagnosi
 
 - web of (intelligent) objects (virtual machines), xenoagnosis
 
@@ -201,6 +223,7 @@ Perchè?
 ### Controllers ###
 ### PE ###
 ## Riferimenti ##
+- [Dr. Alan Kay on the Meaning of "Object-Oriented Programming"][oop]
 - [A to Z of programming languages: Smalltalk-80][kayInterview]
 - [The computer revolution hasn't happened yet][computerRevolution], il [video](http://video.google.com/videoplay?docid=-2950949730059754521) del relativo talk all'OOPSLA del '97.
 - [Design Principles Behind Smalltalk][designPrinciplesSmalltalk]
@@ -210,6 +233,7 @@ Perchè?
 - [Growing Object-Oriented Software Guided By Tests][goos] by Nat Pryce e Steve Freeman
 - [On the Criteria To Be Used in Decomposing Systems into Modules][parnasModules], D.L. Parnas, Carnegie-Mellon University, disponibile anche in formato [html](http://sunnyday.mit.edu/16.355/parnas-criteria.html)
 - [Object Thinking][objectThinking] by David West
+- [Definizione di Duck-Typing][duckTyping]
 
 [kayInterview]: http://www.computerworld.com.au/article/print/352182/z_programming_languages_smalltalk-80
 [computerRevolution]: http://blog.moryton.net/2007/12/computer-revolution-hasnt-happened-yet.html
@@ -221,3 +245,5 @@ Perchè?
 [goos]: http://www.growing-object-oriented-software.com/
 [parnasModules]: http://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf
 [objectThinking]: http://shop.oreilly.com/product/9780735619654.do
+[oop]: http://www.purl.org/stefan_ram/pub/doc_kay_oop_en
+[duckTyping]: https://en.wikipedia.org/wiki/Duck_typing
