@@ -14,6 +14,59 @@ Nella seconda parte, una volta chiarita la *forma mentis* e l'essenza dell'OOP, 
 Infine, esamineremo alcuni esempi reali di applicazione della programmazione ad oggetti.
 
 ## Definizione ##
+> Concezione dei sistemi software come una rete di agenti autonomi intelligenti che forniscono *servizi* (esibiscono comportamenti e incapsulano dati), rendendo possibile il design frattale.
+
+E' prima di tutto una visione, un [modo di pensare][objectThinking] che produce una *decomposizione* del sistema molto diversa da quella prodotta secondo il paradigma procedurale.
+
+Possiamo vederla come un'applicazione del concetto di *divide et impera*, ma con la caratteristica che *il problema viene decomposto in parti che hanno la stessa potenza del tutto* (in contrasto con la decomposizione procedurale che divide strutture dati dalle funzioni che vi operano, ottenendo parti che sono più limitate del sistema in cui "vivono"). Questa concezione della progettazione e *struttura* dei sistemi rende quindi possibile il **design frattale**.
+
+Una conseguenza è che *tutto è un oggetto*. Questo è il semplice concetto unificante che sta alla base di tutte le tecniche, meccaniche e caratteristiche che vengono impiegate per realizzare sistemi realmente object-oriented.
+
+Una buona metafora per coglierne l'essenza sono i sistemi biologici (cellule) e le reti di calcolatori (come internet), che hanno entrambe la caratteristica di essere *sistemi complessi* estremamente *scalabili*. In questi sistemi, i componenti base possono essere relativamente semplici ma dalla loro interazione scaturisce un *comportamento emergente* anche estremamente complesso (a volte caotico).
+
+> I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages
+
+> “real computers all the way down (RCATWD)” --[Alan Kay][kayInterview]
+
+Lo scopo quindi è *gestire la complessità* dei sistemi software permettendo la realizzazione di applicazioni molto complesse mantenendo caratteristiche di:
+
+- Modularità
+- Flessibilità
+- Estendibilità
+- Riusabilità
+
+> \[with OOP you can create\] protected and interchangeable modules to make highly scalable systems --[Alan Kay][kayInterview]
+
+Citando [Alan Kay][historySmalltalk], le caratteristiche principali dell'approccio OO sono:
+
+- *Messaging*: gli oggetti comunicano esclusivamente tramite messaggi e non hanno alcun accesso allo stato degli altri oggetti con cui collabora.
+- *Local retention and protection and hiding of state-process*: incapsulamento dello stato e appunto unica comunicazione tramite messaggi senza accesso diretto.
+- *Extreme late-binding of all things* (xenoagnosi, solo interfacce pubblice, no ADT)
+
+----
+
+- web of (intelligent) objects (virtual machines), xenoagnosis
+
+Tutto è un oggetto, ma ne esistono di due tipi fondamentali:
+
+- Identità
+- Valori
+
+----
+
+
+Di conseguenza è un approccio di *design* che entra in gioco molto prima della scrittura del codice (quindi al di sopra di mere meccaniche e tecniche di programmazione). 
+
+I vantaggi principali sono non-funzionali e sono di tipo *strutturale*. Nel [GOOS][goos] si parla di due tipi di qualità relativi al software:
+
+- **Esterna**: il concetto di qualità dal punto di vista degli utenti finali, ovvero se l'applicazione fa ciò che desiderano in modo gradevole, veloce e senza errori.
+- **Interna**: la *struttura* sottostante del software, riguarda il codice e come è organizzato. Flessibilità, modularità, resilienza, etc.
+
+Un software per essere *sostenibile* oltre che utilizzabile deve avere entrambi questi tipi di qualità e l'approccio OO aiuta molto a mantenere un'alta qualità interna (per svilupparla unitamente alla qualità esterna esistono approcci come il TDD/BDD).
+
+L'approccio è nato per *gestire la complessità* dei sistemi software.
+
+## Appunti definizione ##
 virtual machines/servers, biological cells only able to communicate through messages
 
 bio/net non-data-procedure
@@ -156,6 +209,7 @@ Perchè?
 - [On Understanding Data Abstraction, Revisited][cook] by William R. Cook
 - [Growing Object-Oriented Software Guided By Tests][goos] by Nat Pryce e Steve Freeman
 - [On the Criteria To Be Used in Decomposing Systems into Modules][parnasModules], D.L. Parnas, Carnegie-Mellon University, disponibile anche in formato [html](http://sunnyday.mit.edu/16.355/parnas-criteria.html)
+- [Object Thinking][objectThinking] by David West
 
 [kayInterview]: http://www.computerworld.com.au/article/print/352182/z_programming_languages_smalltalk-80
 [computerRevolution]: http://blog.moryton.net/2007/12/computer-revolution-hasnt-happened-yet.html
@@ -166,3 +220,4 @@ Perchè?
 [historySmalltalk]: http://www.iam.unibe.ch/~ducasse/FreeBooks/SmalltalkHistoryHOPL.pdf
 [goos]: http://www.growing-object-oriented-software.com/
 [parnasModules]: http://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf
+[objectThinking]: http://shop.oreilly.com/product/9780735619654.do
