@@ -1,5 +1,14 @@
 # OOP: You're (probably) doing it wrong #
 
+## Da studiare ##
+- http://wcook.blogspot.fr/2012/07/proposal-for-simplified-modern.html
+- http://www.cs.utexas.edu/~wcook/publications.htm#oo
+- http://www.dalnefre.com/wp/2010/07/message-passing-part-1-synchronous-rendezvous/
+- http://www.dalnefre.com/wp/2010/07/message-passing-part-2-object-oriented-method-invocation/
+- http://www.dalnefre.com/wp/2010/05/deconstructing-the-actor-model/
+- http://leanpub.com/fp-oo
+- http://thinkrelevance.com/blog/2009/08/12/rifle-oriented-programming-with-clojure-2
+
 ## TODO ##
 - Rationale OOP (vantaggi)
 - design frattale, small virtual machines
@@ -9,7 +18,7 @@
 - Citare [Anti-if campaign](http://www.antiifcampaign.com/)
 - Cenno degli Actors
 - Solid
-
+- Eliminare link già riferiti nell'articolo principale
 - dualità object-oriented programming e design (object thinking).
 
 ## Smalltalk ##
