@@ -464,6 +464,7 @@ Secondo la [filosofia di Smalltalk][designPrinciplesSmalltalk] è la prima opzio
 - [Problems With Existing OOP Evidence][problemsOOP]
 - [L'arte perduta di pensare ad oggetti](http://matteo.vaccari.name/blog/archives/723), c'è anche il [video][OOPVaccari].
 - [Objects are just objects, aren't they?][justObjects]
+- [Are We There Yet?](http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey)
 
 - http://www.bonkersworld.net/object-world/
 - [Name Objects after things, not actions!](http://matteo.vaccari.name/blog/archives/743)
